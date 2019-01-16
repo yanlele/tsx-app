@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "MODE=development webpack-dev-server --color --hot --open --mode=development",
+    "build": "MODE=production webpack --mode=production",
+    "start": "npm run dev",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
