@@ -4,7 +4,7 @@ const { axios } = utils
 
 function getSceneInfo(id: number) {
   return axios({
-    url: '/webapi/assignment/stu/paper',
+    url: '/api/paper',
     params: {
       sceneId: id,
     },
@@ -13,7 +13,7 @@ function getSceneInfo(id: number) {
 
 function proxyGithubApi() {
   return axios({
-    url: '/webapi/github/users/ikcamp',
+    url: '/api/users',
   }).then((res: object) => res).catch((err: object) => err)
 }
 

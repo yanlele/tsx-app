@@ -29,7 +29,13 @@ module.exports = merge(baseConfig, {
                             publicPath: '../'
                         }
                     },
-                    'css-loader?modules&localIdentName=[hash:base64:7]',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[hash:base64:7]'
+                        }
+                    },
                     {
                         loader: 'postcss-loader',
                     },

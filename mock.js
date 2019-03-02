@@ -1,5 +1,5 @@
 module.exports = {
-    'GET /webapi/assignment/stu/paper': {
+    'GET /api/paper': {
         data: {
             id: 11,
         },
@@ -8,7 +8,7 @@ module.exports = {
         status: 0,
     },
 
-    'POST /webapi/assignment/stu/records': function (req, res) {
+    'POST /api/users': function (req, res) {
         console.warn('post record:=========================');
         console.warn(req.body);
         res.json({

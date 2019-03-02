@@ -20,12 +20,10 @@ module.exports = merge(baseConfig, {
                 use: [
                     'style-loader',
                     {
-                        loader: 'typings-for-css-modules-loader',
+                        loader: "css-loader",
                         options: {
                             modules: true,
-                            namedExport: true,
-                            camelCase: true,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                            localIdentName: '[hash:base64:7]'
                         }
                     },
                     'postcss-loader',
@@ -63,11 +61,11 @@ module.exports = merge(baseConfig, {
             ApiMocker(app, mockPath)
         },
         proxy: {
-            '/webapi/github': {
-                target: 'https://api.github.com/',
+            '/api': {
+                target: '',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/webapi/github': '/'
+                    '^/api': '/'
                 },
                 logLevel: 'debug',
             },

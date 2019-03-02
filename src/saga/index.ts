@@ -1,9 +1,9 @@
-import {delay} from 'redux-saga'
 import {
     put,
     takeEvery,
     takeLatest,
     all,
+    delay,
 } from 'redux-saga/effects'
 import API from "server"
 import ACTIONS from "const/actions"

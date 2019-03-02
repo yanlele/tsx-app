@@ -25,7 +25,12 @@ module.exports = {
                             publicPath: '../',
                         }
                     },
-                    'css-loader?importLoaders=1',
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
                     'postcss-loader'
                 ],
                 include: paths.PATH_SRC,
@@ -39,7 +44,12 @@ module.exports = {
                             publicPath: '../',
                         }
                     },
-                    'css-loader?importLoaders=1',
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1
+                        }
+                    }
                 ],
                 include: /node_modules/,
             },
