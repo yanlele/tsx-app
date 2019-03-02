@@ -32,13 +32,15 @@
   "mydependance": {
     "cz-conventional-changelog": "^2.1.0",
     "commitizen": "^3.0.7",
-    "antd": "^3.13.6"
+    "antd": "^3.13.6",
+    "npm-check-updates": "^2.15.0"
   },
   "homepage": "https://github.com/yanlele/tsx-app#readme",
   "devDependencies": {
     "@types/node": "^10.12.29",
     "antd": "^3.13.6",
     "autoprefixer": "^9.1.0",
+    "npm-check-updates": "^2.15.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "8.0.1",
     "babel-loader": "^7.1.4",
@@ -104,6 +106,7 @@
     "style-loader": "^0.21.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "ts-import-plugin": "^1.5.5",
     "ts-loader": "^5.1.1",
     "typings-for-css-modules-loader": "^1.7.0",
     "url-loader": "^1.0.1",
@@ -121,7 +124,6 @@
     "@types/react-redux": "^6.0.9",
     "@types/react-router-dom": "^4.3.1",
     "@types/redux-form": "^7.4.8",
-    "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.18.0",
     "clean-webpack-plugin": "^0.1.19",
     "delegate": "^3.2.0",

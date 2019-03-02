@@ -1,5 +1,6 @@
 const path = require('path')
 const paths = require('./paths')
+const tsImportPluginFactory = require('ts-import-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -30,7 +31,7 @@ module.exports = {
                 include: paths.PATH_SRC,
             },
             {
-              test: /antd.*\.css/,
+                test: /antd.*\.css/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -51,7 +52,22 @@ module.exports = {
             {
                 test: /\.(ts|tsx)?$/,
                 use: [
-                    "ts-loader",
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                            getCustomTransformers: () => ({
+                                before: [tsImportPluginFactory({
+                                    libraryName: 'antd',
+                                    libraryDirectory: 'lib',
+                                    style: 'css'
+                                })]
+                            }),
+                            compilerOptions: {
+                                module: 'es2015'
+                            }
+                        },
+                    },
                 ],
                 include: [
                     paths.PATH_SRC,
