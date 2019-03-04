@@ -6,7 +6,9 @@ const {
   INCREMENT_IF_ODD,
 } = ACTIONS;
 
-export default function counter(state = 0, action: {type: string}) {
+const initState = 0
+
+export default function counter(state = initState, action: {type: string}) {
   switch (action.type) {
     case INCREMENT:
       return state + 1;
