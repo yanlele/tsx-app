@@ -5,6 +5,8 @@ import {
   BrowserRouter as Router,
   // HashRouter as Router,
 } from 'react-router-dom';
+import { LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 import AppContainer from 'containers/AppContainer';
 import loadableComponent from './loadableComponent';
 
@@ -14,13 +16,15 @@ const NoMatchContainer = () => import('containers/NoMatchContainer');
 
 const routes = (
   <Router>
-    <AppContainer>
-      <Switch>
-        <Route exact path="/" component={loadableComponent(HomeContainer)} />
-        <Route path='/counter' component={loadableComponent(CounterContainer)} />
-        <Route component={loadableComponent(NoMatchContainer)} />
-      </Switch>
-    </AppContainer>
+    <LocaleProvider locale={zhCN}>
+      <AppContainer>
+        <Switch>
+          <Route exact path="/" component={loadableComponent(HomeContainer)} />
+          <Route path='/counter' component={loadableComponent(CounterContainer)} />
+          <Route component={loadableComponent(NoMatchContainer)} />
+        </Switch>
+      </AppContainer>
+    </LocaleProvider>
   </Router>
 );
 

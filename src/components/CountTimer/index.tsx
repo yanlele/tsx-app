@@ -74,9 +74,9 @@ class CountTimer extends React.Component<CountTimerCheckProps, State> {
 
   render() {
     return (
-      <div onClick={this.preveentHandle} className={cx('counttimer', this.state.show ? 'counttimer__show' : '')}>
-        <div className={cx('counttimer__mask')} />
-        <div className={cx('counttimer__main')}>{this.state.time}</div>
+      <div onClick={this.preveentHandle} className={cx('counttimer', this.state.show ? 'counttimerShow' : '')}>
+        <div className={cx('counttimerMask')} />
+        <div className={cx('counttimerMain')}>{this.state.time}</div>
       </div>
     );
   }
