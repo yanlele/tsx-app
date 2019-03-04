@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.config.base.js"
+      }
+    }
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "prefer-destructuring": 0,
+    "camelcase": 0,
+    "no-param-reassign": 1,
+    "class-methods-use-this": 0,
+    "react/no-unused-state": 1,
+    "react/no-unused-prop-types": 1,
+    "import/first": 1,
+    "react/require-default-props": 0,
+    "react/prefer-stateless-function": 1,
+    "react/jsx-indent": 1,
+    "react/jsx-closing-tag-location": 1,
+    "import/no-unresolved": 1,
+    "react/sort-comp": "off",
+    "react/prop-types": 0,
+    "react/no-multi-comp": 0,
+    "max-lines": 0,
+    "react/no-array-index-key": 1,
+    "consistent-return": 0,
+    "jsx-a11y/no-static-element-interactions": 1,
+    "no-underscore-dangle": [
+      2,
+      {
+        "allow": [
+          "_store"
+        ]
+      }
+    ],
+    "no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "react/no-did-mount-set-state": 1,
+    "react/jsx-no-target-blank": 0,
+    "max-len": [
+      2,
+      120
+    ]
+  }
+}
