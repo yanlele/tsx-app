@@ -71,7 +71,7 @@ module.exports = merge(baseConfig, {
             },
         },
         clientLogLevel: 'error',
-        port: 3000,
+        port: 3001,
         contentBase: paths.PATH_DIST,
         inline: true,
         hot: true,

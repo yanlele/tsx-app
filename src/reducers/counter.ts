@@ -1,4 +1,4 @@
-import ACTIONS from 'const/actions'
+import ACTIONS from 'const/actions';
 
 const {
   INCREMENT,
@@ -15,6 +15,6 @@ export default function counter(state = 0, action: {type: string}) {
     case DECREMENT:
       return state - 1;
     default:
-      return state
+      return state;
   }
 }

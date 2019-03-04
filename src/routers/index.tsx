@@ -1,12 +1,12 @@
-import * as React from 'react'
+import * as React from 'react';
 import {
   Route,
   Switch,
   BrowserRouter as Router,
   // HashRouter as Router,
-} from 'react-router-dom'
-import AppContainer from 'containers/AppContainer'
-import loadableComponent from './loadableComponent'
+} from 'react-router-dom';
+import AppContainer from 'containers/AppContainer';
+import loadableComponent from './loadableComponent';
 
 const CounterContainer = () => import('containers/CounterContainer');
 const HomeContainer = () => import('containers/HomeContainer');
@@ -22,6 +22,6 @@ const routes = (
       </Switch>
     </AppContainer>
   </Router>
-)
+);
 
-export default routes
+export default routes;

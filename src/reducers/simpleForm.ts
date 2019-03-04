@@ -10,6 +10,6 @@ export default function simpleForm(state = STATE, action: {type: string, payload
     case 'RESET':
       return Object.assign({}, {}, state);
     default:
-      return state
+      return state;
   }
 }

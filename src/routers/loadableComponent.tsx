@@ -1,17 +1,17 @@
-import * as React from 'react'
+import * as React from 'react';
 // import Loadable from 'react-loadable'
-const Loadable = require('react-loadable')
+const Loadable = require('react-loadable');
 const Loading = (props: {error: any}) => {
-  const { error } = props
+  const { error } = props;
   if (error) {
     return (
       <div>
         <p>{error.stack ? error.stack : ''}</p>
       </div>
-    )
+    );
   }
-  return <div>{' '}</div>
-}
+  return <div>{' '}</div>;
+};
 
 const loadableComponent = (loader: any, render?: any) => {
   const config: {
@@ -23,11 +23,11 @@ const loadableComponent = (loader: any, render?: any) => {
     loader,
     loading: Loading,
     delay: 1000,
-  }
+  };
   if (render) {
-    config.render = render
+    config.render = render;
   }
-  return Loadable(config)
-}
+  return Loadable(config);
+};
 
-export default loadableComponent
+export default loadableComponent;

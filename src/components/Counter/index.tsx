@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 interface CounterCheckProps {
   counter: number,
@@ -19,7 +19,7 @@ class Counter extends React.Component<CounterCheckProps, {}> {
       onIncrementAsync,
       onIncrementAsyncOnce,
       onProxyWeather,
-    } = this.props
+    } = this.props;
     return (
       <div>
         <button onClick={onIncrement}>
@@ -41,8 +41,8 @@ class Counter extends React.Component<CounterCheckProps, {}> {
         <hr />
         <div>Clicked: <span style={{ fontSize: '20px', color: 'red' }}> {counter} </span>times</div>
       </div>
-    )
+    );
   }
 }
 
-export default Counter
+export default Counter;

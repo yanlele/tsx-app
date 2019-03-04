@@ -1,5 +1,5 @@
-import * as React from 'react'
-import {connect} from 'react-redux'
+import * as React from 'react';
+import {connect} from 'react-redux';
 
 class HomeContainer extends React.Component<any, {}, any> {
 
@@ -11,8 +11,8 @@ class HomeContainer extends React.Component<any, {}, any> {
                 <button onClick={()=>console.log('123')}>click</button>
                 <button>你好</button>
             </div>
-        )
+        );
     }
 }
 
-export default connect()(HomeContainer)
+export default connect()(HomeContainer);

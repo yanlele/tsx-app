@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import * as classNames from 'classnames/bind'
-import * as styles from './index.less'
+import * as React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import * as classNames from 'classnames/bind';
+import * as styles from './index.less';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 class App extends React.Component {
   render() {
     return (
@@ -21,8 +21,8 @@ class App extends React.Component {
         <br />
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

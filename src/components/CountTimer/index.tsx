@@ -1,8 +1,8 @@
-import * as React from 'react'
-import * as classNames from 'classnames/bind'
-import * as styles from './index.less'
+import * as React from 'react';
+import * as classNames from 'classnames/bind';
+import * as styles from './index.less';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 interface CountTimerCheckProps {
   show: boolean,
@@ -12,64 +12,64 @@ interface CountTimerCheckProps {
 const initialState = {
   show: false,
   time: 5,
-}
+};
 
-type State = Readonly<typeof initialState>
+type State = Readonly<typeof initialState>;
 
 class CountTimer extends React.Component<CountTimerCheckProps, State> {
 
   static readonly defaultProps: CountTimerCheckProps = {
     show: false,
     time: 5,
-  }
+  };
 
-  state: State = initialState
+  state: State = initialState;
 
-  timer: any = undefined
+  timer: any = undefined;
 
   componentWillReceiveProps(nextProps: CountTimerCheckProps) {
-    const { show, time = 5 } = nextProps
+    const { show, time = 5 } = nextProps;
     this.setState({
       show,
       time,
-    })
+    });
     if (show) { // 开始
-      this.setIntervalTime()
+      this.setIntervalTime();
     } else {
-      this.clearIntervalTime()
+      this.clearIntervalTime();
     }
   }
 
   componentWillUnmount() {
-    this.clearIntervalTime()
+    this.clearIntervalTime();
   }
 
   setIntervalTime() {
     if (this.timer !== undefined) {
-      return
+      return;
     }
     this.timer = setInterval(() => {
       if (this.state.time === 0) {
         this.setState({
           show: false,
-        })
-        this.clearIntervalTime()
-        return
+        });
+        this.clearIntervalTime();
+        return;
       }
       this.setState({
         time: this.state.time - 1,
-      })
-    }, 1000)
+      });
+    }, 1000);
   }
 
   clearIntervalTime() {
-    clearInterval(this.timer)
-    this.timer = undefined
+    clearInterval(this.timer);
+    this.timer = undefined;
   }
 
   preveentHandle = (evt: React.MouseEvent<HTMLElement>) => {
-    evt.stopPropagation()
-    evt.preventDefault()
+    evt.stopPropagation();
+    evt.preventDefault();
   }
 
   render() {
@@ -78,8 +78,8 @@ class CountTimer extends React.Component<CountTimerCheckProps, State> {
         <div className={cx('counttimer__mask')} />
         <div className={cx('counttimer__main')}>{this.state.time}</div>
       </div>
-    )
+    );
   }
 }
 
-export default CountTimer
+export default CountTimer;
