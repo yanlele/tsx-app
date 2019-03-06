@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as classNames from 'classnames/bind';
-import * as styles from './index.less';
+import React from 'react';
+import classNames from 'classnames/bind';
+import styles from './index.less';
 
 const cx = classNames.bind(styles);
 

@@ -1,12 +1,18 @@
-import ACTIONS from 'const/actions';
+const INCREMENT = 'INCREMENT'; // 增加
+const DECREMENT = 'DECREMENT'; // 减少
+const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD';
+const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
+const INCREMENT_ASYNC_ONCE = 'INCREMENT_ASYNC_ONCE';
 
-const {
+export const counterConst ={
   INCREMENT,
-  DECREMENT,
   INCREMENT_IF_ODD,
-} = ACTIONS;
+  DECREMENT,
+  INCREMENT_ASYNC,
+  INCREMENT_ASYNC_ONCE,
+};
 
-const initState = 0
+const initState = 0;
 
 export default function counter(state = initState, action: {type: string}) {
   switch (action.type) {
