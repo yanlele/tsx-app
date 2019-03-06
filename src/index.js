@@ -5,10 +5,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { AppContainer } from 'react-hot-loader';
-import 'common/reset.less';
-import rootSaga from 'saga';
-import reducer from 'reducers';
-import routers from 'routers';
+import './common/reset.less';
+import rootSaga from './saga';
+import reducer from './reducers';
+import routers from './routers';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(

@@ -13,18 +13,16 @@ const {
   CT_SHOW_REQUEST,
 } = countTimerConst;
 
-function* setCountTimerShowRequest() {
-  yield put({
-    type: CT_SHOW,
-  });
-  yield delay(5000);
-  yield put({
-    type: CT_HIDE,
-  });
-}
-
 function* setCountTimerShowRequestSaga() {
-  yield takeLatest(CT_SHOW_REQUEST, setCountTimerShowRequest);
+  yield takeLatest(CT_SHOW_REQUEST, function* () {
+    yield put({
+      type: CT_SHOW,
+    });
+    yield delay(5000);
+    yield put({
+      type: CT_HIDE,
+    });
+  });
 }
 
 function* getProxyGithubApi() {
