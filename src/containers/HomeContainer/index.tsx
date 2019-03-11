@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Button, Select} from 'antd';
 import Counter from "./Counter";
 import {ContextProvider} from './reducer';
+import Counter2 from "./Counter2";
 
 const {Option} = Select;
 
@@ -23,6 +24,7 @@ class HomeContainer extends React.Component<{}, {}> {
           <hr/>
           <ContextProvider>
             <Counter />
+            <Counter2 />
           </ContextProvider>
         </div>
     );
