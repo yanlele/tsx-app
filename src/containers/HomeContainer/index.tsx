@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
 import {Button, Select} from 'antd';
+import Counter from "./Counter";
+import {ContextProvider} from './reducer';
 
 const {Option} = Select;
 
@@ -18,9 +19,14 @@ class HomeContainer extends React.Component<{}, {}> {
           <Select style={{width: '300px'}}>
             {arr.map((item: any) => (<Option key={item.value} value={item.id}>{item.value}</Option>))}
           </Select>
+
+          <hr/>
+          <ContextProvider>
+            <Counter />
+          </ContextProvider>
         </div>
     );
   }
 }
 
-export default connect()(HomeContainer);
+export default HomeContainer;
