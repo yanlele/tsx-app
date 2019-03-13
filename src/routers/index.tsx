@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Route,
   Switch,
-  BrowserRouter as Router,
+  BrowserRouter as Router, Redirect,
   // HashRouter as Router,
 } from 'react-router-dom';
 import {LocaleProvider} from 'antd';
@@ -14,7 +14,10 @@ const routes = (
       <LocaleProvider locale={zhCN}>
         <Switch>
           {pageRouteConfig.map((route, index) => {
-            const {path, exact, component, title} = route;
+            const {path, exact, component, title, redirectTo} = route;
+            if (redirectTo) {
+              return <Redirect key={index} to={redirectTo}/>;
+            }
             return <Route
                 key={index}
                 exact={exact}

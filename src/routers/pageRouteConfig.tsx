@@ -5,10 +5,11 @@ import {RouteComponentProps} from "react-router";
 /*interface*/
 interface IStaticRoutes {
   path: string,
-  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>,
-  exact: boolean,
-  title: string,
-  metas?: any[]
+  component?: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>,
+  exact?: boolean,
+  title?: string,
+  metas?: any[],
+  redirectTo?: string,
 }
 
 const staticRotes: IStaticRoutes[] = [
@@ -23,15 +24,19 @@ const staticRotes: IStaticRoutes[] = [
     path: '/count',
     component: pages.CounterContainer,
     exact: true,
-    title: '主页',
+    title: '计数器',
     metas: [],
   },
   {
     path: '',
     component: pages.NoMatchContainer,
     exact: true,
-    title: '主页',
+    title: '没有匹配到',
     metas: [],
+  },
+  {
+    path: '/counter',
+    redirectTo: '/count',
   },
 ];
 
